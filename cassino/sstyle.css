@@ -1,0 +1,21 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+  }
+  
+  .container {
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+  }
+  
+  .number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff0;
+    text-shadow: 0 0 10px #ff0;
+  }
+  
