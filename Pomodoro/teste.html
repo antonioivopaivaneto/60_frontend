@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background-card {
+    position: relative;
+}
+
+.rotating-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 450px;
+    background-image: linear-gradient(to right, #22d3ee, #1d8bf1);
+    border-radius: 20px;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform .3s;
+    z-index: -1;
+}
+
+.login-card {
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    max-width: 250px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color:  #22d3ee;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, #22d3ee, #1d8bf1);
+
+}
+
+input:focus{
+outline: 0;
+}
+
+input{
+   height: 25px;
+}
+
+</style>
+</head>
+<body>
+    <div class="background-card">
+        <div class="rotating-card"></div>
+        <div class="login-card">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <div class="input-group">
+                    <label for="username">Usuário:</label>
+                    <input  type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button id="submit-btn" type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const rotatingCard = document.querySelector('.rotating-card');
+        const submitBtn = document.getElementById('submit-btn');
+
+        // Adiciona a classe para rotacionar ao passar o mouse sobre o botão
+        submitBtn.addEventListener('mouseover', () => {
+            rotatingCard.style.transform = 'translate(-50%, -50%) rotate(0deg)';
+        });
+
+        // Remove a classe de rotação ao retirar o mouse do botão
+        submitBtn.addEventListener('mouseout', () => {
+            rotatingCard.style.transform = 'translate(-50%, -50%) rotate(-10deg)';
+        });
+    </script>
+</body>
+</html>

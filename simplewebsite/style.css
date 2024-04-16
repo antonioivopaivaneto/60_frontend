@@ -76,7 +76,8 @@ header p{
 }
 
 .boxes{
-    margin-top:50px;
+    margin:50px;
+    padding:10px;
     display:flex;
     flex-direction:row;
 }
@@ -85,4 +86,9 @@ button{
     border:none;
     padding:10px 14px;
     color:#fff;
+    margin-top:10px;
+    cursor:pointer;
+}
+.item{
+    margin:15px;
 }
