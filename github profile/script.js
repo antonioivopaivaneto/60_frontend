@@ -12,7 +12,7 @@ async function getUser(username) {
     getRepos(username)
   } catch (err) {
 
-    if(err.response.satus === 404) {
+    if(err.response.status === 404) {
         createErrorCard('No profile with this username')
 
     }
@@ -25,6 +25,7 @@ async function getRepos(username){
     try {
         const { data } = await axios(APIURL + username + '/repos?sort=created');
         addReposToCard(data)
+        console.log(data)
       } catch (err) {
     
         createErrorCard('Problem fech repos')
